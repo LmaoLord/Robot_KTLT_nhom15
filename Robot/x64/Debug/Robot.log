@@ -1,0 +1,56 @@
+﻿  Robot.cpp
+C:\Users\ACER\source\repos\Robot\Robot.cpp(98,24): error C2228: left of '.begin' must have class/struct/union
+C:\Users\ACER\source\repos\Robot\Robot.cpp(98,24): message : type is 'int *[]'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(98,6): error C2672: 'any_of': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(1168,30): message : could be 'bool std::any_of(const _InIt,const _InIt,_Pr)'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(98,7): message : 'bool std::any_of(const _InIt,const _InIt,_Pr)': expects 3 arguments - 2 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(1168): message : see declaration of 'std::any_of'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): error C2672: 'std::begin': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1937,27): message : could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,25): message : Failed to specialize function template '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1937): message : see declaration of 'std::begin'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): message : With the following template arguments:
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): message : '_Ty=int *'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): message : '_Size=0'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1922,30): message : or       'unknown-type std::begin(const _Container &)'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,25): message : Failed to specialize function template 'unknown-type std::begin(const _Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1922): message : see declaration of 'std::begin'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): message : With the following template arguments:
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): message : '_Container=int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1917,30): message : or       'unknown-type std::begin(_Container &)'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,25): message : Failed to specialize function template 'unknown-type std::begin(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1917): message : see declaration of 'std::begin'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): message : With the following template arguments:
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,40): message : '_Container=int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\initializer_list(55,35): message : or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,25): message : 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\initializer_list(55): message : see declaration of 'std::begin'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,25): message : 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\initializer_list(55): message : see declaration of 'std::begin'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): error C2672: 'std::end': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1942,27): message : could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,43): message : Failed to specialize function template '_Ty *std::end(_Ty (&)[_Size]) noexcept'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1942): message : see declaration of 'std::end'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): message : With the following template arguments:
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): message : '_Ty=int *'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): message : '_Size=0'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1932,30): message : or       'unknown-type std::end(const _Container &)'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,43): message : Failed to specialize function template 'unknown-type std::end(const _Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1932): message : see declaration of 'std::end'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): message : With the following template arguments:
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): message : '_Container=int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1927,30): message : or       'unknown-type std::end(_Container &)'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,43): message : Failed to specialize function template 'unknown-type std::end(_Container &)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\xutility(1927): message : see declaration of 'std::end'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): message : With the following template arguments:
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,56): message : '_Container=int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\initializer_list(60,35): message : or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,43): message : 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\initializer_list(60): message : see declaration of 'std::end'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,43): message : 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int *[]'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\initializer_list(60): message : see declaration of 'std::end'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,89): error C2672: 'any_of': no matching overloaded function found
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(1168,30): message : could be 'bool std::any_of(const _InIt,const _InIt,_Pr)'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(113,18): message : 'bool std::any_of(const _InIt,const _InIt,_Pr)': expects 3 arguments - 2 provided
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\algorithm(1168): message : see declaration of 'std::any_of'
+C:\Users\ACER\source\repos\Robot\Robot.cpp(286,40): error C2070: 'int *[]': illegal sizeof operand
