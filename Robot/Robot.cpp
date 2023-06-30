@@ -6,8 +6,8 @@
 #include<algorithm>
 using namespace std;
 
-int arrData[10][10];
-int* ptrOutput[];  //moved cell
+int arrData[10][10];			//å¥èâÉfÅ[É^
+vector<int *> ptrOutput;		//moved cell's address
 
 //check if the current cell is in any corner, number indicating corner is counted clockwise
 int isCorner(int cx, int cy, int x, int y) {			
@@ -47,6 +47,17 @@ int isAtBorder(int cx, int cy, int x, int y) {
 	}
 }
 
+bool movedCellCheck(int *n) {
+	if (ptrOutput.size() == 0) {
+		return false;
+	}
+	for (int i = 0; i < ptrOutput.size(); i++) {
+		if (n == ptrOutput[i]) {
+			return true;
+		}
+	}
+	return false;	
+}
 
 bool isOutOfValidMove(int cx, int cy, int x, int y) {
 	int x1 = cx; int y1 = cy - 1;
@@ -94,13 +105,17 @@ bool isOutOfValidMove(int cx, int cy, int x, int y) {
 		checkedCoordinates.erase(checkedCoordinates.begin() + 4 - 2);
 		break;
 	}
-	for (int i = 0; i < sizeof(checkedCoordinates) / 8; i++) {
-		if (any_of(ptrOutput.begin(), ptrOutput.end(), [&](int k) {return k == *checkedCoordinates[i];})) {
-			existedCount += 1;
+	if (size(checkedCoordinates) != 0) {
+		for (int i = 0; i < size(checkedCoordinates); i++) {
+			if (movedCellCheck(checkedCoordinates[i])) {
+				existedCount += 1;
+			}
 		}
-
 	}
-	if (existedCount == sizeof(checkedCoordinates) / 8) {
+	else {
+		return true;
+	}
+	if (existedCount == size(checkedCoordinates)) {
 		return true;
 	}
 	else {
@@ -108,14 +123,15 @@ bool isOutOfValidMove(int cx, int cy, int x, int y) {
 	}
 }
 
+
+
 int maxNumber(vector<int*> n) {
-	for (int i = 0; i < sizeof(n) / 8; i++) {
-		bool existed = any_of(begin(ptrOutput), end(ptrOutput),[&](int k) {return k == *n[i];});
-		if (existed) {
+	for (int i = 0; i < size(n); i++) {
+		if (movedCellCheck(n[i])) {
 			n.erase(n.begin() + i);
 		}
 	}
-	for (int i = 1; i < sizeof(n)/8; i++) {
+	for (int i = 1; i < size(n); i++) {
 		if (*n[0] < *n[i]) {
 			n[0] = n[i];
 		}
@@ -148,7 +164,7 @@ int main() {
 	while (isOutOfValidMove(cx, cy, x, y) == false) {		
 		int max;
 		vector<int *> myVector;					//parameter array to pass to function
-		ptrOutput[i] = &arrData[cx][cy];		//add the current cell value's address to the output array
+		ptrOutput.push_back(&arrData[cx][cy]);		//add the current cell value's address to the output array
 		i += 1;
 		switch (isCorner(cx, cy, x, y)) {
 		case 0:
@@ -283,7 +299,7 @@ int main() {
 		myVector.clear();
 
 	}
-	for (int i = 0; i < sizeof(ptrOutput) / 8; i++) {
+	for (int i = 0; i < ptrOutput.size(); i++) {
 		cout << *ptrOutput[i] << endl;
 	}
 	return 0;
